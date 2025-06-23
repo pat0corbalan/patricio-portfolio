@@ -109,7 +109,9 @@ const Projects: React.FC = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              ref={(el) => el && (projectRefs.current[index] = el)}
+              ref={(el) => {
+                if (el) projectRefs.current[index] = el
+              }}
               className="relative group bg-gray-800 dark:bg-white rounded-xl overflow-hidden shadow-lg"
             >
               {/* Imagen del Proyecto */}

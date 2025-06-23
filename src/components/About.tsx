@@ -71,7 +71,9 @@ const About: React.FC = () => {
           {skills.map((skill, index) => (
             <div
               key={skill.category}
-              ref={(el) => el && (skillRefs.current[index] = el)}
+              ref={(el) => {
+                if (el) skillRefs.current[index] = el
+              }}
               className="bg-gray-800 dark:bg-white rounded-xl p-6 shadow-lg hover:scale-105 transition-transform duration-300"
             >
               <svg className="w-10 h-10 text-purple-400 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
