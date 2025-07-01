@@ -15,16 +15,16 @@ const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <nav className="sticky top-0 z-50 bg-gray-900/80 dark:bg-gray-100/80 backdrop-blur-md transition-colors duration-500">
+    <nav className="sticky top-0 z-50 bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-md transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <motion.a
           href="#home"
-          className="text-2xl font-bold text-white dark:text-gray-900"
+          className="text-2xl font-bold text-white dark:text-white0"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          Patricio<span className="text-purple-400">.Dev</span>
+          Patricio<span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">.Dev</span>
         </motion.a>
 
         {/* Menú Desktop */}
@@ -79,7 +79,7 @@ const Navbar: React.FC = () => {
 
         {/* Menú Móvil - Botón Hamburguesa */}
         <button
-          className="md:hidden text-white dark:text-gray-900"
+          className="md:hidden text-white dark:text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -127,10 +127,10 @@ const Navbar: React.FC = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                     />
                   </svg>
-                  Modo Oscuro
+                  Modo Claro
                 </>
               ) : (
                 <>
@@ -139,10 +139,10 @@ const Navbar: React.FC = () => {
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       strokeWidth="2"
-                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
                     />
                   </svg>
-                  Modo Claro
+                  Modo Oscuro
                 </>
               )}
             </motion.button>

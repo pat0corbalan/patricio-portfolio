@@ -240,7 +240,7 @@ const Hero: React.FC = () => {
               className="text-5xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white"
             >
               Hola, soy{' '}
-              <span className="bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent dark:bg-none dark:text-white">
+              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {name.split('').map((char, i) => (
                   <motion.span
                     key={i}

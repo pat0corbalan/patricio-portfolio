@@ -1,28 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700&family=Poppins:wght@400;500&family=Roboto+Mono:wght@400&display=swap');
 @import "tailwindcss";
 
+/* Variables para modo claro y oscuro */
 :root {
-  --foreground-rgb: 17, 24, 39; /* Oscuro para texto en modo claro */
-  --background-rgb: 243, 244, 246; /* Claro para fondo en modo claro */
+  --foreground-rgb: 17, 24, 39;       /* Texto oscuro en modo claro */
+  --background-rgb: 243, 244, 246;    /* Fondo claro por defecto */
 }
 
 .dark {
-  --foreground-rgb: 255, 255, 255; /* Claro para texto en modo oscuro */
-  --background-rgb: 17, 24, 39; /* Oscuro para fondo en modo oscuro */
+  --foreground-rgb: 255, 255, 255;    /* Texto claro en modo oscuro */
+  --background-rgb: 17, 24, 39;       /* Fondo oscuro por defecto */
 }
 
+/* Estilo global del body */
 body {
   font-family: 'Inter', sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background: linear-gradient(to bottom right, #f3f4f6, #dbeafe); /* Fondo igual a Hero modo claro */
   transition: background 0.5s ease, color 0.5s ease;
 }
 
-#home h1 {
-  font-family: 'Poppins', sans-serif;
-  color: rgb(var(--foreground-rgb));
+.dark body {
+  background: linear-gradient(to bottom right, #111827, #5b21b6); /* Fondo igual a Hero modo oscuro */
 }
 
+/* Tipografías en sección #home */
+#home h1,
 #home h2 {
   font-family: 'Poppins', sans-serif;
   color: rgb(var(--foreground-rgb));
@@ -33,19 +36,12 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-/* Texto 3D en CosmicPlanet */
+/* Fuente para texto 3D */
 .text-3d {
   font-family: 'Roboto Mono', monospace;
 }
 
-#home {
-  background: linear-gradient(to bottom right, #f3f4f6, #dbeafe);
-}
-
-.dark #home {
-  background: linear-gradient(to bottom right, #111827, #5b21b6);
-}
-
+/* Fondo para secciones generales */
 section {
   background: rgb(var(--background-rgb));
 }
