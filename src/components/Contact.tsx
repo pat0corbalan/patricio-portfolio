@@ -16,7 +16,7 @@ const Contact: React.FC = () => {
 
     emailjs.send(
       'service_g1r3xtn', // Reemplaza con tu Service ID de EmailJS
-      'template_olh5qbd', // Reemplaza con tu Template ID de EmailJS
+      'template_2ax7m2c', // Reemplaza con tu Template ID de EmailJS
       formData,
       'Bg9HE1u3EX2V-f5Ap' // Reemplaza con tu Public Key de EmailJS
     ).then(() => {
