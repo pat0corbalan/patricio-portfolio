@@ -31,13 +31,16 @@ const Contact: React.FC = () => {
     <section id="contact" className="py-24 bg-gray-900 dark:bg-gray-100 transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4">
         <motion.h2
-          className="text-4xl lg:text-5xl font-bold text-center mb-12"
+          className="text-4xl lg:text-5xl font-bold text-center mb-12 
+                    bg-gradient-to-r from-purple-400 to-pink-400 
+                    bg-clip-text text-transparent animated-gradient-text"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           Contáctame
         </motion.h2>
+
         <motion.div
           className="max-w-lg mx-auto bg-gray-800 dark:bg-white rounded-xl p-8 shadow-lg"
           initial={{ opacity: 0, y: 50 }}
@@ -83,7 +86,7 @@ const Contact: React.FC = () => {
             </div>
             <motion.button
               type="submit"
-              className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white font-medium transition-all duration-300"
+              className="w-full px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-400 hover:from-purple-400 hover:to-pink-400 text-white font-medium transition-all duration-300 animated-gradient-text"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >

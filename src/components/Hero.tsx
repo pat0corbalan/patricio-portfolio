@@ -221,7 +221,7 @@ const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="pt-24 min-h-screen flex items-center bg-gradient-to-br from-gray-100 to-blue-100 dark:from-gray-900 dark:to-purple-950 transition-colors duration-500 relative overflow-hidden"
+      className="pt-24 min-h-screen flex items-center"
     >
       <Particles id="tsparticles" init={particlesInit} className="absolute inset-0 z-0" />
       <div className="max-w-7xl mx-auto px-4 relative z-10">

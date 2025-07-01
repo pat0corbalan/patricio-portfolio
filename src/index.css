@@ -50,9 +50,36 @@ section {
   background: rgb(var(--background-rgb));
 }
 
-/* Ocultar cursor nativo en desktop */
-@media (min-width: 768px) {
-  body {
-    cursor: none;
-  }
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#home {
+  background: linear-gradient(-45deg, #fdfbfb, #ebedee, #dbeafe, #c7d2fe);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+.dark #home {
+  background: linear-gradient(-45deg, #0f172a, #8a1e86, #6d28d9, #9333ea);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientTextShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient-text {
+  background-size: 200% 200%;
+  animation: gradientTextShift 6s ease infinite;
+}
+
+#tsparticles {
+  pointer-events: none;
 }

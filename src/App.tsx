@@ -8,7 +8,6 @@ import Projects from './components/Projects'
 import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
-import CustomCursor from './components/CustomCursor'
 import ReactGA from 'react-ga4'
 import { ThemeProvider, useTheme } from './components/ThemeContext'
 
@@ -67,14 +66,13 @@ const App: React.FC = () => {
       }
     }, [theme])
 
-    return <Particles id="tsparticles" init={particlesInit} className="fixed inset-0 -z-10" />
+    return <Particles id="tsparticles" init={particlesInit} className="fixed inset-0 -z-10 pointer-events-none" />
   }
 
   return (
     <ThemeProvider>
       <div className="min-h-screen relative">
         <ParticlesBackground />
-        <CustomCursor />
         <Navbar />
         <Hero />
         <About />

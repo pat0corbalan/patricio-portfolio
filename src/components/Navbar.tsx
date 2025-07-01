@@ -15,7 +15,7 @@ const Navbar: React.FC = () => {
   const { theme, toggleTheme } = useTheme()
 
   return (
-    <nav className="sticky top-0 z-50 bg-gray-100/80 dark:bg-gray-900/80 backdrop-blur-md transition-colors duration-500">
+    <nav className="sticky top-0 z-50 bg-gray-900/80 backdrop-blur-md transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <motion.a
           href="#home"
