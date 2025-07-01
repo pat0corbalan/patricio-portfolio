@@ -1,29 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@700&family=Poppins:wght@400;500&family=Roboto+Mono:wght@400&display=swap');
 @import "tailwindcss";
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-rgb: 17, 24, 39;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 17, 24, 39;
-  }
+  --foreground-rgb: 17, 24, 39; /* Oscuro para texto en modo claro */
+  --background-rgb: 243, 244, 246; /* Claro para fondo en modo claro */
 }
 
 .dark {
-  --foreground-rgb: 17, 24, 39;
-  --background-rgb: 255, 255, 255;
+  --foreground-rgb: 255, 255, 255; /* Claro para texto en modo oscuro */
+  --background-rgb: 17, 24, 39; /* Oscuro para fondo en modo oscuro */
 }
 
 body {
   font-family: 'Inter', sans-serif;
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  transition: background-color 0.5s, color 0.5s;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+#home h1 {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(var(--foreground-rgb));
+}
+
+#home h2 {
+  font-family: 'Poppins', sans-serif;
+  color: rgb(var(--foreground-rgb));
+}
+
+#home p {
+  font-family: 'Inter', sans-serif;
+  color: rgb(var(--foreground-rgb));
+}
+
+/* Texto 3D en CosmicPlanet */
+.text-3d {
+  font-family: 'Roboto Mono', monospace;
+}
+
+#home {
+  background: linear-gradient(to bottom right, #f3f4f6, #dbeafe);
+}
+
+.dark #home {
+  background: linear-gradient(to bottom right, #111827, #5b21b6);
+}
+
+section {
+  background: rgb(var(--background-rgb));
+}
+
+.dark section {
+  background: rgb(var(--background-rgb));
 }
 
 /* Ocultar cursor nativo en desktop */
