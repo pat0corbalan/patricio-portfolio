@@ -15,10 +15,10 @@ const Contact: React.FC = () => {
     setStatus('Enviando...')
 
     emailjs.send(
-      'YOUR_SERVICE_ID', // Reemplaza con tu Service ID de EmailJS
-      'YOUR_TEMPLATE_ID', // Reemplaza con tu Template ID de EmailJS
+      'service_g1r3xtn', // Reemplaza con tu Service ID de EmailJS
+      'template_olh5qbd', // Reemplaza con tu Template ID de EmailJS
       formData,
-      'YOUR_PUBLIC_KEY' // Reemplaza con tu Public Key de EmailJS
+      'Bg9HE1u3EX2V-f5Ap' // Reemplaza con tu Public Key de EmailJS
     ).then(() => {
       setStatus('Mensaje enviado con éxito!')
       setFormData({ name: '', email: '', message: '' })

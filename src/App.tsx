@@ -14,7 +14,7 @@ import { ThemeProvider, useTheme } from './components/ThemeContext'
 
 const App: React.FC = () => {
   useEffect(() => {
-    ReactGA.initialize('G-11423498231') // Reemplaza con tu Measurement ID
+    ReactGA.initialize('G-N6M5M2JN72') // Reemplaza con tu Measurement ID
     ReactGA.send({ hitType: 'pageview', page: window.location.pathname })
   }, [])
 
